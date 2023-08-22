@@ -1,0 +1,87 @@
+<app-menu></app-menu>
+<section class="page-section" id="contact">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0">Entrez en contact avec nous!</h2>
+                <hr class="divider" />
+                <!-- <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p> -->
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+
+            <div class="col-lg-6"
+                style="background-image:url(assets/img/facebook-contact-support-featured.webp); background-size: cover;">
+            </div>
+
+            <div class="col-lg-6">
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+                <div class="container">
+                    <h2>Contactez-nous</h2>
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+
+
+                            <input class="form-control" id="name" type="text" placeholder="Votre nom..."
+                                formControlName="name" />
+                            <label for="name">Nom et prénom</label>
+
+
+                            <div *ngIf="contactForm?.get('name')?.invalid && (contactForm?.get('name')?.dirty || contactForm?.get('name')?.touched)"
+                                class="text-danger">Le nom est obligatoire.</div>
+
+                        </div>
+
+                        <!-- Email address input -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="bdztech7@gmail.com"
+                                formControlName="email" />
+                            <label for="email">Adresse email</label>
+                            <div *ngIf="contactForm?.get('email')?.invalid && (contactForm?.get('email')?.dirty || contactForm?.get('email')?.touched)"
+                                class="text-danger">
+                                <div *ngIf="contactForm?.get('email')?.hasError('required')">Email est obligatoire.
+                                </div>
+                                <div *ngIf="contactForm?.get('email')?.hasError('email')">Email invalide.</div>
+                            </div>
+                        </div>
+
+                        <!-- Phone number input -->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+                                formControlName="phone" />
+                            <label for="phone">Numéro de téléphone</label>
+                            <div *ngIf="contactForm?.get('phone')?.invalid && (contactForm?.get('phone')?.dirty || contactForm?.get('phone')?.touched)"
+                                class="text-danger">Le numéro de téléphone est obligatoire.</div>
+                        </div>
+
+                        <!-- Message input -->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" placeholder="Entrez votre message..."
+                                style="height: 10rem" formControlName="message"></textarea>
+                            <label for="message">Message</label>
+                            <div *ngIf="contactForm?.get('message')?.invalid && (contactForm?.get('message')?.dirty || contactForm?.get('message')?.touched)"
+                                class="text-danger">Le message est obligatoire.</div>
+                        </div>
+
+                        <!-- Submit Button-->
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit" [disabled]="contactForm.invalid">Envoyer</button>
+                          </div>
+                          
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<app-footer></app-footer>
