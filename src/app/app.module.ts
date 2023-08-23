@@ -16,8 +16,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReservationsComponent } from './reservations/reservations.component';
+import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { MatSelectModule } from '@angular/material/select';
+import { CommonModule } from '@angular/common';
+import { ProfilComponent } from './profil/profil.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +35,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     CommerceComponent,
     MenuComponent,
     FooterComponent,
-    DetailsComponent
+    DetailsComponent,
+    ReservationsComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +48,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
+    NgbModule,
+    NgbDropdownModule,
+    MatTableModule,
+    MatPaginatorModule,
+    NgxPaginationModule,
+    // HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    CommonModule,
+    // Ng2SearchPipeModule,
 
     // ...
   ],

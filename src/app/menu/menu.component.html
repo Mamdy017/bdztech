@@ -17,11 +17,18 @@
                 <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
                 </li>
 
-                <!-- <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Envoyer</button> -->
             </ul>
-            <button class="nav-item btn btn-primary"><a class="nav-link " style="color: #fff;">Connexion</a></button>
-   
-            
+            <button class="nav-item btn btn-primary" style="display: none;"><a class="nav-link " style="color: #fff; ">Connexion</a></button>
+            <li class="nav-item" ngbDropdown style="list-style: none; ">
+              <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" ngbDropdownToggle>
+                <img src="../../assets/img/profil.jpg" width="40" height="40" class="rounded-circle">
+              </a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" routerLinkActive="active" routerLink="/reservation">Mes réservations</a>
+                <a class="dropdown-item" routerLinkActive="active" routerLink="/profil">Paramètres</a>
+                <a class="dropdown-item" href="#">Déconnexion</a>
+              </div>
+            </li>
         </div>
     </div>
 </nav>

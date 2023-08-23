@@ -6,6 +6,8 @@ import { LocationComponent } from './location/location.component';
 import { ContactComponent } from './contact/contact.component';
 import { CommerceComponent } from './commerce/commerce.component';
 import { DetailsComponent } from './details/details.component';
+import { ReservationsComponent } from './reservations/reservations.component';
+import { ProfilComponent } from './profil/profil.component';
 
 const routes: Routes = [
   {
@@ -18,6 +20,10 @@ const routes: Routes = [
   {  path: 'contact', component: ContactComponent },
   {  path: 'commerce', component: CommerceComponent },
   {  path: 'details', component: DetailsComponent },
+  {  path: 'reservation', component: ReservationsComponent },
+  {  path: 'profil', component: ProfilComponent },
+
+
 
 ];
 
